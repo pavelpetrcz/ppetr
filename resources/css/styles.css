@@ -1,7 +1,15 @@
-.grey_container {
+.prvni_blok {
+    vertical-align: middle;
+}
+
+.druhy_blok {
     background-color: #f5f5f5;
 }
 
 .nadpis {
     vertical-align: middle;
+}
+
+.text-center {
+   text-align:center;
 }
