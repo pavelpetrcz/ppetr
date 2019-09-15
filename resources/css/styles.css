@@ -1,3 +1,8 @@
+html *
+{
+
+   font-family: 'Courier New', sans-serif;
+}
 .prvni_blok {
     vertical-align: middle;
 }
@@ -7,8 +12,31 @@
 }
 
 .nadpis {
-    font-family: 'Cabin', sans-serif;
+    font-family: 'Courier New', sans-serif;
+    font-size: 320%;
+    font-style: italic;
+}
 
+.telo {
+  font-family: 'Courier New', sans-serif;
+  font-size: 90%;
+}
+
+.teloVetsi {
+  font-family: 'Courier New', sans-serif;
+  font-size: 120%;
+  text-decoration: underline;
+}
+
+.button {
+  font-family: 'Courier New', sans-serif;
+  font-weight: bold;
+}
+
+.nadpisKarty {
+  font-family: 'Courier New', sans-serif;
+  font-weight: bold;
+  font-size: 19px;
 }
 
 .text-center {
@@ -16,9 +44,13 @@
 }
 
 .ikona {
-    font-size: 50px;
+    font-size: 38 px;
 }
 
 .obrazek {
     width: 250px;
+}
+
+.mujCardDeck {
+  margin: auto;
 }

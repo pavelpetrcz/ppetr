@@ -2,211 +2,87 @@
 
 <html lang="cs">
     <head>
+        <!-- jquery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
         <!-- responzivnost mobilního webu-->
         <meta name="viewport" content="width=device-width,initial-scale=1">
-        
+
         <!-- můj vlastní CSS styl-->
         <link rel="stylesheet" href="resources/css/styles.css" type="text/css">
-    
+
         <!--přidání Bootstrapu-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-    
+
         <!-- Google Fonts-->
         <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
-        
+
         <!-- Ikonky -->
         <link rel="stylesheet" href="resources/css/ionicons.css" type="text/css">
 
-        <title>Pavel Petr</title>   
+        <title>Pavel Petr | IT analyst | Prague</title>
     </head>
-<body>  
+<body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
- <a class="navbar-brand" href="#">
-    <img src="resources/img/uvodni_foto.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
-    Pavel Petr
-  </a>  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#toggle" aria-controls="toggle" aria-expanded="false" aria-label="Toggle navigation">
+ <a class="navbar-brand" href="https://www.ppetr.cz">
+    <img src="resources/img/uvodni_foto.jpg" width="30" height="30" class="d-inline-block align-top" alt="Pavel Petr">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="#navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="toggle">
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
     <div class="navbar-nav">
-      <a class="nav-item nav-link" href="#">Home<span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="#">Projects</a>
-      <a class="nav-item nav-link" href="#">Contact</a>
+      <a class="nav-item nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="projects.html">Projects</a>
+	  <a class="nav-item nav-link" href="aboutme.html">About me</a>
+      <a class="nav-item nav-link" href="contact.html">Contact</a>
+	   <a class="nav-item nav-link" href="blog.html">Blog</a>
     </div>
   </div>
 </nav>
-      
+
     <!--START - uvod blok-->
     <div class="container prvni_blok mt-5">
         <div class="row">
             <div class="col-2"></div>
             <div class="col-8 text-center">
-                <img src="resources/img/uvodni_foto.jpg" class="rounded-circle my-3 img-fluid obrazek"></img>
                     <h1 class="nadpis">Pavel Petr</h1><br>
             </div>
             <div class="col-2"></div>
         </div>
-    
+
     <!--KONEC - uvod blok-->
-        
+
      <!--START - CV blok-->
     <div class="container">
         <div class="row">
             <div class="col-2"></div>
             <div class="col-8 text-center grey_background">
-            <p class="mt-3">If somebody ask me to describe myself - I just say one word - analyst.</p>
-                <p>I always tend to figure out how things works. As younger I was influenced by my family and studied economics. I studied banking, financial markets and analysis of stock market later on university.</p>
-                <p>All the time I knew that IT is something second, something interesting, just behind economics. It was just a nice hobby few years ago. Suddenly it bacame main part of my every day life when I switched to IT analysis.</p>
-                <p>As I mentioned before - my most powerful skill is analysis and I am learning how to become front-end developer.</p>
+            <p class="mt-3 telo">My passion is <u>analysis</u>.</p>
+                <p class="mt-3 telo">All my <a href="projects.html">projects</a> are parts of my passion Web analytics, IT analysis or data science.
+
+                </p>
+                <p class="mt-3 telo">If you like any project let me know <a href="contact.html">here</a>. I will be glad and answer very soon.</p>
+                <p class="mt-3 telo">Some of my existing work I described in more detail at <a href="blog.html">blog</a>.</p>
             </div>
             <div class="col-2"></div>
-        </div> 
+        </div>
     </div>
     <!--KONEC - CV blok-->
-    
-    <!--START - portfolio blok-->
-        <div class="container">
-            <div class="row">
-                <div class="col-2"></div>
-                <div class="col-8 text-center my-3">
-                    <h3 class="text-center">Portfolio</h3>
-                    
-                    <div class="row">
-                        <div class="col">
-                            <!--prvni karticka-->
-                            <div class="card">
-                                <img class="card-img-top" src="resources/img/sbatuzkem.jpg" alt="Blog - Sbaťůžkem.cz">
-                                    <div class="card-body">
-                                        <h4 class="card-title">Sbaťůžkem.cz</h4>
-                                        <p class="card-text">I and my wife run travel blog which is build on Wordpress to easily capture our travel memories for future.</p>
-                                        <a href="http://www.sbatuzkem.cz" target="_blank" class="btn btn-primary">View page</a>
-                                    </div>
-                            </div>  
-                        </div>
-                        <!--druha karticka-->
-                        <div class="col">
-                            <div class="card">
-                                <img class="card-img-top" src="resources/img/pavelpetr.jpg" alt="Osobní stránka - ppetr.cz">
-                                <div class="card-body">
-                                    <h4 class="card-title">ppetr.cz</h4>
-                                    <p class="card-text">My personal web, where I have used HTML, CSS and framework Bootstrap.</p>
-                                    <a href="http://www.ppetr.cz" target="_blank" class="btn btn-primary">View page</a>
-                                </div>
-                            </div>      
-                        </div>
-                    </div>     
-                </div>  
-                <!--pravy prazdny pane-->
-                <div class="col-2"></div>
-            </div> 
-        </div>
-        <!--KONEC - portfolio blok-->
-        
-    <!--START - schopnosti blok-->
-    <div class="container">
-        <div class="row">
-            <div class="col-2"></div>
-            <div class="col-8 py-3 my-3 grey_background">
-            <h3 class="text-center">Skills</h3>
-                
-                <!-- začátek - seznam se schopnostmi-->
-                <div class="list-group">
-                    
-                    <a href="#" class="list-group-item list-group-item-action">
-                        <div class="d-flex justify-content-between">
-                            <h5 class="mb-1">IT analysis</h5>
-                            <small>Intermediate</small>
-                        </div>
-                        <p class="mb-1">I have worked for czech bank onwed by french international banking corporation. My aim is to develop one of the best mobile banking app at the local market.</p>        
-                    </a>
-                    
-                    <a href="#" class="list-group-item list-group-item-action">
-                        <div class="d-flex justify-content-between">
-                            <h5 class="mb-1">HTML and CSS</h5>
-                            <small>Intermediate</small>
-                        </div>
-                        <p class="mb-1">The level of knowledge is suitable for most of situation during process of web front-end development.</p>        
-                    </a>
-                    
-                    <a href="#" class="list-group-item list-group-item-action">
-                        <div class="d-flex justify-content-between">
-                            <h5 class="mb-1">Javascript/jQuery</h5>
-                            <small>Basic</small>
-                        </div>
-                        <p class="mb-1">I am still in process of learning this skill.</p>        
-                    </a>
-                    
-                      <a href="#" class="list-group-item list-group-item-action">
-                        <div class="d-flex justify-content-between">
-                            <h5 class="mb-1">Bootstrap</h5>
-                            <small>Basic</small>
-                        </div>
-                        <p class="mb-1">I learned Bootstrap little bit in 2017 and my aim is to use it in future projects.</p>        
-                    </a>
-                    
-                    <a href="#" class="list-group-item list-group-item-action">
-                        <div class="d-flex justify-content-between">
-                            <h5 class="mb-1">UML</h5>
-                            <small>Intermediate</small>
-                        </div>
-                        <p class="mb-1">I have regular knowledge of UML standard which enables me to read and create most used diagrams.</p>
-                    </a>
-                        
-                    <a href="https://www.linkedin.com/in/pavelpetr/" target="_blank" class="list-group-item list-group-item-action active">
-                        <div class="d-flex justify-content-between">
-                            <h5 class="mb-1">Other</h5>
-                        </div>
-                        <p class="mb-1">Find more at my LinkedIn profile.</p>        
-                    </a>
-                </div>        
-                 <!-- konec - seznam se schopnostmi-->             
-                    
-            </div>
-            <!--pravy prazdny panel-->
-            <div class="col-2"></div>     
-        </div>      
-    </div> 
-        
-        <!--KONEC - schopnosti blok-->
-        
-         <!--START - citat blok-->
-        <div class="container">
-            <div class="row mb-3">
-                <div class="col-2"></div>
-                <div class="col-8 text-center py-3 grey_background">
-                    <h3>My favourite quote</h3>
-                <blockquote>
-                    <p class="font-italic">“The ability to simplify means to eliminate the unnecessary so that the necessary may speak.”</p>
-                    <footer>
-                        – <a href="https://en.wikipedia.org/wiki/Hans_Hofmann" target="_blank">Hans Hofmann</a>
-                    </footer>
-                </blockquote>
-                </div> 
-                <div class="col-2"></div>
-            </div> 
-        </div>
-        <!--KONEC - citat blok-->
-        
+
+
+
+
         <!--START - odkazy SM-->
         <div class="container">
             <div class="row mb-3">
                 <div class="col-2"></div>
-                <div class="col-8 text-center my-3">
-                    <h3 class="text-center">Contact</h3>
-                    <p>Contact me via e-mail at <b>pavelpetrcz [at] gmail.com</b>.</p> <p>Otherwise you can send me a message at social networks.</p>
-                    
-                    <a href="http://www.github.com" target="_blank"><i class="icon ion-social-github p-3 ikona"></i></a>
-                    <a href="http://www.linkedin.com" target="_blank"><i class="icon ion-social-linkedin p-3 ikona"></i></a>
-                    <a href="http://www.twitter.com" target="_blank"><i class="icon ion-social-twitter p-3 ikona"></i></a>
-                    
-    
-                    
-                </div> 
+                <div class="col-8 text-center my-3"></div>
                 <div class="col-2"></div>
-            </div> 
+            </div>
         </div>
         <!--KONEC - odkazy SM-->
-            
+
     </body>
 </html>
