@@ -1,6 +1,5 @@
 html *
 {
-
    font-family: 'Courier New', sans-serif;
 }
 .prvni_blok {
@@ -43,14 +42,20 @@ html *
    text-align: center;
 }
 
-.ikona {
-    font-size: 50px;
-}
-
 .obrazek {
     width: 250px;
 }
 
 .mujCardDeck {
   margin: auto;
+}
+
+.card-img {
+ width: 200px;
+ height: 200px;
+ object-fit: scale-down;
+}
+
+.ikonka {
+  font-size: 50px;
 }
