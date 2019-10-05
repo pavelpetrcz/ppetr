@@ -56,6 +56,13 @@ html *
  object-fit: scale-down;
 }
 
+.card-img-smaller {
+ width: 150px;
+ height: 150px;
+ object-fit: scale-down;
+ text-align: center;
+}
+
 .ikonka {
   font-size: 50px;
 }
