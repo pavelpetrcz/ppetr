@@ -1,2 +1,0 @@
-# ppetr
-ppetr.cz 
