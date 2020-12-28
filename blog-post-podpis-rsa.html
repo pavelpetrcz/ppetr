@@ -1,0 +1,132 @@
+  <!DOCTYPE html>
+
+  <html lang="cs">
+
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173440332-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-173440332-1');
+    </script>
+
+    <!-- jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- responzivnost mobilního webu-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <!-- mùj vlastní CSS styl-->
+    <link rel="stylesheet" href="resources/css/styles.css" type="text/css">
+
+    <!--pøidání Bootstrapu-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+    <!-- Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+
+    <!-- Ikonky -->
+    <link rel="stylesheet" href="resources/css/ionicons.css" type="text/css">
+
+    <meta charset="iso-8859-2">
+    <title>Pavel Petr | IT analytik | Praha</title>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <a class="navbar-brand" href="index.html">
+        <img src="resources/img/uvodni_foto.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+
+      </a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#toggle" aria-controls="toggle" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="toggle">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="index.html">Domù<span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="projects.html">Projekty</a>
+          <a class="nav-item nav-link" href="aboutme.html">Bio</a>
+          <a class="nav-item nav-link" href="contact.html">Kontakt</a>
+          <a class="nav-item nav-link" href="blog.html">Blog</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+
+        <div class="col-2"></div>
+        <div class="col-8 text-left my-3">
+            <a href="blog.html" class="btn btn-outline-primary">Zpìt</a>
+          <br><br><br>
+
+           <!--Blog post start-->
+          <h2><b>Podpis RSA klíèem v Jupyter Lab krok za krokem</b></h2>
+          <br>
+          <img src="resources/img/atharva-lele-GSXHEh-5IMI-unsplash.jpg" width="100%">
+          <br>
+          <br>
+          <p>Pro jeden z&nbsp;pracovních úkolù bylo nezbytné rozchodit podepisování a&nbsp;ovìøování sadou klíèù. Aby vývoj probíhal hladce a&nbsp;bez zbyteèných zádrhelù tak z&nbsp;mého subjektivního pohledu je nejlep¹í, kdy¾ vývojáøùm dáte jasné
+            zadání k&nbsp;jaké hodnotì se mají dopoèíst.</p>
+          <p>Rozhodnutí sestavit referenèní zpùsob výpoètu s&nbsp;hodnotami mezivýsledkù jsem uèinil i&nbsp;s&nbsp;vìdomím, ¾e kolegové vývojáøi budou reálné výpoèty dìlat v&nbsp;tøech jazycích jako Swift, Kotlin a&nbsp;Java.</p>
+          <p>V neposlední øadì byla jednodu¹¹í komunikace s&nbsp;kolegy z&nbsp;týmu zabývající se zabezpeèením. Validace probíhala na hmatatelných výsledcích místo slovního zadání, které mù¾e zejména v&nbsp;oblasti kryptografie trpìt v&nbsp;dùsledku
+            øady mo¾ných parametrù - od zvolených ¹ifer, jejich verzí, pøes vybraná schémata,standardy, etc.</p>
+          <h5><b>Samotný výpoèet</h5></b>
+          <p>Za pøedpokladu, ¾e máte instalovanou Anacondu tak v&nbsp;hlavní nabidce Windows vyhledejte její pøíkazovou øádku - Anaconda Prompt a&nbsp;tu spus»te. Nyní pøíkazem spus»te Jupyter Lab.</p>
+          <p><code>jupyter lab</code></p>
+
+          <p>V nìm vytvoøte nový notebook ve kterém celou referenèní implementaci provedeme.</p>
+
+          <p>Pro jednoduchost jsem pøipravil Gist na Githubu, kde si mù¾ete celý postup stáhnout a&nbsp;importovat.</p>
+          <script src="https://gist.github.com/pavelpetrcz/58bca38328536d2b86d71af6cdf9a6db.js"></script>
+
+          <p>Princip výpoètu je jednoduchý a v Gistu popsaný, ale i tak ho struènì popí¹i je¹tì sem s nìjakými vedlej¹ími poznámkami pokud budou potøeba.
+          <ul>
+            <li>V úvodní èásti importujeme potøebné knihovny - pozor nesple»te si <b>Cryptodome</b> a <b>Crypto</b>. Pokud budete mít nainstalované obì dvì, pak se doèkáte jen samých problémù. Python nebude vìdìt se kterou chcete pracovat. Obì
+              knihovny mají metody pojmenované stejnì - Crypto je pøedchùdce Cryptodome, tím to je. Proto na to upozoròuji. Sám jsem se s tím potýkal a velmi vøele doporuèuji pracovat s Cryptodome. Instalace vás nemine pokud jste si Anacondu
+              nainstalovali právì teï.</li>
+            <li>Následuje naètení základní promìnných - zprávy, co se bude podepisovat, a dvou klíèù - veøejného a privátního.</li>
+            <li>Následuje výpoèet samotného podpisu zprávy privátním klíèem ve vybraném schématu.</li>
+            <li>Následnì se vypoètený hash pøevádí do podoby HEX a Base64. Cílem zveøejnìní daných mezivýpoètù je právì verifikovatelnost správnosti implementace v libovolném jazyce (prostì jestli mi to leze z konzole IDE, to co vidím v zadání).
+            </li>
+            <li>Na konci je pouze kus kodu, který potvrzuje správnost výpoètu opaèným postupem. Tedy ovìøením, ¾e podpis zprávy je validní.</li>
+          </ul>
+          <p>Na zaèátku jsem si nebyl zcela jistý tím, ¾e nìkdo mou ukázku, jak to vypoèítat, ocení. Se svou ukázkou v Pythonu jsem vlastnì poøídil dost muziky. Soubor jsem k zadání pøikládal jen jakoby navíc, ale nakonec se stal primárním zdrojem
+            inspirace pro faktickou implementaci.
+          <h5><b>Závìr</h5></b>
+          <ul>
+            <li>najdìte si zpùsob, jak tu nejtì¾¹í èást vývojového úkolu vizualizovat, nakreslit nebo nabouchat, abyste si v¹ichni rozumìli a odladili nejasnosti</li>
+            <li>dost øe¹ení chyb zaèíná "já myslel, ¾e myslí¹, abych" - takto zavání nepøesné nebo neúplné zadání; vyhnìte se tomu obloukem, kdy¾ to jde</li>
+            <li>a nakonec je to taky legranda se nìco pøiuèit nového</li>
+          </ul>
+          <h5><b>Zdroje</h5></b>
+          <ul>
+            <li><a href="https://www.pycryptodome.org/en/latest/src/signature/pkcs1_v1_5.html?highlight=sign#pkcs-1-v1-5-rsa" target="_blank">https://www.pycryptodome.org/en/latest/src/signature/pkcs1_v1_5.html?highlight=sign#pkcs-1-v1-5-rsa</a></li>
+            <li><a href="https://tools.ietf.org/html/rfc8017" target="_blank">https://tools.ietf.org/html/rfc8017</a></li>
+          </ul>
+          <!--Blog post end-->
+        </div>
+      </div>
+    </div>
+    <div class="col-2"></div>
+    </div>
+    </div>
+
+    <!--START - bottom pane-->
+    <div class="container">
+      <div class="row mb-3">
+        <div class="col-2"></div>
+        <div class="col-8 text-center my-3"></div>
+        <div class="col-2"></div>
+      </div>
+    </div>
+    <!--END - bottom pane-->
+
+  </body>
+
+  </html>
