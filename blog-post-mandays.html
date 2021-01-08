@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html lang="cs">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173440332-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-173440332-1');
+  </script>
+
+  <!-- jquery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- responzivnost mobilního webu-->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- muj CSS styl-->
+  <link rel="stylesheet" href="resources/css/styles.css" type="text/css">
+
+  <!-- Bootstrapu-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+  <!-- Google Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+
+  <!-- Ikonky -->
+  <link rel="stylesheet" href="resources/css/ionicons.css" type="text/css">
+
+  <meta charset="iso-8859-2">
+  <title>Pavel Petr | IT analytik | Praha</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <a class="navbar-brand" href="index.html">
+      <img src="resources/img/uvodni_foto.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+
+    </a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#toggle" aria-controls="toggle" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="toggle">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" href="index.html">Domù<span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="projects.html">Projekty</a>
+        <a class="nav-item nav-link" href="aboutme.html">Bio</a>
+        <a class="nav-item nav-link" href="contact.html">Kontakt</a>
+        <a class="nav-item nav-link" href="blog.html">Blog</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+
+      <div class="col-2"></div>
+      <div class="col-8 text-left my-3">
+        <a href="blog.html" class="btn btn-outline-primary">Zpìt</a>
+        <br><br><br>
+
+        <!--Blog post start-->
+        <h2><b>Mandays - moje první webová aplikace v&nbsp;Javì a&nbsp;povzbuzení pro ty, co taky po veèerech »ukají pro radost</b></h2>
+        <br>
+        <img src="resources/img/davide-ragusa-RTivRcYz1Bw-unsplash.jpg" width="100%">
+        <br>
+        <br>
+
+        <p>Trvalo mi to opravdu dlouho - více ne¾ 2 roky s&nbsp; pøestávkami novopeèeného tatíka, ale svìtlo svìta spatøila první aplikace, kterou jsem spustil a&nbsp;nezùstane jen v&nbsp;¹uplíku.</p>
+
+        <p>Pøedcházely jí jiné drobné projekty a&nbsp;úkoly, které jsem plnil pøi samostudiu. A¾ pøi¹el okam¾ik, kdy jsem potøeboval trochu víc ne¾ jen, ¾e kus kódu sèítá dvì èísla a&nbsp;pak kontroluje, jestli je nebo není prvoèíslem.</p>
+
+        <p>Chtìl jsem nìco uceleného, co bude dávat smysl a&nbsp;bude mít nìjaký úèel.</p>
+
+        <p>Jednoho dne mì fakt vytoèilo, jak otravné je hledání toho správného øádku a&nbsp;sloupce v&nbsp;plánovacím kalendáøi.</p>
+
+        <p>A&nbsp;tehdy jsem si asi za 3 hodiny zbastlil poèítaèku pracovních dnù a&nbsp;hodin v&nbsp;Excelu. Dodnes hodnoty tìchto výpoètù tvoøí základ celé appky. Jsou jimi hodnoty pro jednotlivé mìsíce na 50 let dopøedu. Nakonec jsem si øekl, co okolo toho nevyrobit GUI a&nbsp;k&nbsp;tomu jednoduché API pro strojový pøístup. Tak vznikla my¹lenka Mandays.</p>
+
+        <p>Výsledek mù¾ete posoudit na <a href="https://mandayscz.herokuapp.com/" target="_blank">https://mandayscz.herokuapp.com/</a></p>
+
+        <p><i>P.S. - appka se po 30 minutách neèinnosti "uspí", pak déle trvá, ne¾ nastartuje. Buïte trpìliví.</i></p>
+        <h5><b>Technologie</h5></b>
+
+        <p>Aplikaci jsem napsal v&nbsp;Java 8. Co stojí za zmínku je, ¾e jsem se vydal slo¾itìj¹í cestou. Nepou¾il jsem vùbec Spring. Pou¾ívám spí¹ vìci podle standardu EE Javy. Tak¾e tøeba API na Spring Boot bych mìl za 2 hodiny, ale s&nbsp;Jersey mi to
+          trvalo déle. Zase na druhou stranu vím trochu více o&nbsp;fungování uvnitø. Spring hodnì vìcí odstiòuje, co¾ je skvìlé kdy¾ víte, co dìláte. Kdy¾ se uèíte, tak je lep¹í vidìt, jak vìci makají. A&nbsp;o&nbsp;to mi ¹lo.</p>
+
+        <p>Databáze bì¾í na PostgreSQL. Tam nebylo pøíli¹ moc co øe¹it. Na projektu máme Oracle a&nbsp;ten je tomu dost podobný, tak¾e jsem pou¾il to, co mi bylo známé.</p>
+
+        <p>Front-end je kombinace HTML, CSS, Bootstrap a&nbsp;k&nbsp;rozpohybování slou¾í staøièké JSP. Ano, JSP a&nbsp;jen z dùvodù vzdìlávacích - viz vý¹e.</p>
+        <h5><b>Co jsem se nauèil</h5></b>
+        <ul>
+          <li>Nevím, jestli je to málo kurá¾e, ale nauèil jsem se, ¾e programátor ze mì nebude - smutné, ale svìt není fér, nìkomu to jde a&nbsp;nìkomu to "sakra" teda jde - já jsem spí¹ v&nbsp;té první skupinì.</li>
+          <li>Nauèil jsem se stra¹nì moc o&nbsp;bì¾né praxi programátorù, jejich potøebách a&nbsp;v&nbsp;neposlední øadì zpùsobu uva¾ování, tak¾e v praxi analytika je pro mì snaz¹í si pøedstavit, co má být v&nbsp;zadání.</li>
+          <li>Urèitì jsem si odnesl hodnì o&nbsp;objektovém paradigmatu, to se hodí v obecné rovinì, proto¾e je to zatím stále mainstreamové pojetí programování dne¹ních dnù, aè se sem tlaèí dal¹í styly.</li>
+          <li>Zjistil jsem, ¾e to je fakt døina a&nbsp;zároveò zábava - tak¾e komu to jde, jdìte do toho po hlavì.</li>
+          <li>Hou¾evnatost - to je k nezaplacení. Kdy¾ mi nìco ne¹lo, tak jsem to na 14 dnù odlo¾il, nebo jsem otravoval svoje seniorní kamarády a&nbsp;kolegy, nebo jsem sjí¾dìl návody, tutoriály, stackOverflow, dokud jsem prostì to co mi nefungovalo
+            neopravil nebo nezprovoznil.</li>
+          <li>Èíst pozornì  ano, zní to jako trivialita - doba vybízí ke skenování textu, hledání rychlých øe¹ení, bohu¾el nìkdy jsem nìco nemohl rozbìhat, jenom proto¾e jsem pøeskoèil pár, na první pohled, zbyteèných odstavcù návodu nebo
+            dokumentace.</li>
+        </ul>
+        <h5><b>Co bych dìlal u¾ jinak</h5></b>
+          <ul>
+            <li>Nepsal bych to v&nbsp;Javì, ale v&nbsp;Pythonu - je to ideální volba pro analytiky, kdyby nevy¹lo programování (jako mnì). Aspoò bych mìl super základy pro skripty datového analytika, která dneska frèí dost v&nbsp;Pythonu. Na druhou stranu, Python
+              a&nbsp;Java není jako èe¹tina a&nbsp;èín¹tina. Je to spí¹ nìco jako pol¹tina a èe¹tina. Spousty vìcí bude podobných, jen se to pí¹e jinak.</li>
+            <li>Programovat ka¾dý den - nemusíte napsat ka¾dý den spoustu kódu, staèí si udr¾et v&nbsp;hlavì to, èeho se vlastnì sna¾íte docílit. Obèas jsem bohu¾el vypadnul z&nbsp;rytmu i&nbsp;tøeba na mìsíce. A&nbsp;to pak bolí si vzpomenout, jak jsem to mìl
+              namy¹lené. Navíc kdy¾ si vytvoøíte návyk, tak pak si i&nbsp;vyu¾ívané techniky a&nbsp;øe¹ení osvojíte a&nbsp;pìknì zapamatujete.</li>
+            <li>Víc bych spal - není nic moc spát 5 - 6 hodin a&nbsp;myslet si, ¾e vymyslíte druhý Facebook. Produktivita a&nbsp;výkon potøebují zdroje - pro lidi to je jídlo a&nbsp;spánek. S tím, ¾e od mých 30 let zaèíná spánek hrát prim v&nbsp;tom, jak mi nìco dal¹í
+              den pùjde.</li>
+          </ul>
+          <h5><b>Vzdìlání</h5>
+        </b>
+
+        <p>Pro povzbuzení musím øíct, ¾e jsem èerpal v&nbsp;drtivé vìt¹inì z&nbsp;volnì dostupných zdrojù.</p>
+
+        <p>Zaèal jsem sám jako samouk na ITnetwork.cz a&nbsp;jel jsem jeden tutoriál za druhým. Udìlal jsem jich asi 30 nebo 40 a&nbsp;zasekl jsem se.</p>
+
+        <p>Tou dobou se v&nbsp;Inventi otevírala Java pro zaèáteèníky, tak jsem se pøihlásil. Pokraèoval jsem rovnou do Java pro pokroèilé. U¾ v té dobì jsem psal tuto malou aplikaci. Èerpal jsem i&nbsp;z&nbsp;oficiální dokumentace Oracle, kterou jsem také obèas
+          vyu¾il.</p>
+
+        <p>No a pak u¾ jsem se víceménì hodnì ptal a&nbsp;ptal - jak kolegù, tak strýèka Googla.</p>
+        <h5><b>Podìkování</h5></b>
+
+        <p>Pomohla mi spousta lidí, kterým patøí velký dík:</p>
+        <ul>
+          <li>pøednì moje man¾elka - která vidìla rozsypaný èaj a&nbsp;pøesto mì podporovala,</li>
+          <li>lektorùm v Inventi, kteøí se starají o&nbsp;bìh Java kompetence za jejich lekce,</li>
+          <li>Petrovi Hákovi za podporu sebevzdìlávání,</li>
+          <li>Pavlovi Horovi a&nbsp;Kubovi Novotnému - za trpìlivé odpovìdi na nejapné otázky.</li>
+        </ul>
+        <!--Blog post end-->
+      </div>
+    </  div>
+  </div>
+  <div class="col-2"></div>
+  </div>
+  </div>
+
+  <!--START - bottom pane-->
+  <div class="container">
+    <div class="row mb-3">
+      <div class="col-2"></div>
+      <div class="col-8 text-center my-3"></div>
+      <div class="col-2"></div>
+    </div>
+  </div>
+  <!--END - bottom pane-->
+
+</body>
+
+</html>
