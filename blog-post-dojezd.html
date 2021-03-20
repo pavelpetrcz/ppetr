@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html lang="cs">
+
+<head>
+
+  <!-- jquery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- responzivnost mobilniho webu-->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- onw CSS style-->
+  <link rel="stylesheet" href="resources/css/styles.css" type="text/css">
+
+  <!--Bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+  <!-- Google Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+
+  <!-- Ikonky -->
+  <link rel="stylesheet" href="resources/css/ionicons.css" type="text/css">
+
+  <meta charset="UTF-8">
+  <title>Pavel Petr | IT analytik | Praha</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <a class="navbar-brand" href="index.html">ppetr.cz</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#toggle" aria-controls="toggle" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="toggle">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" href="projects.html">Projekty</a>
+        <a class="nav-item nav-link" href="aboutme.html">Bio</a>
+        <a class="nav-item nav-link" href="contact.html">Kontakt</a>
+        <a class="nav-item nav-link" href="blog.html">Blog</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+
+      <div class="col-2"></div>
+      <div class="col-8 text-left my-3">
+        <a href="blog.html" class="btn btn-outline-primary">Zpět</a>
+        <br><br><br>
+
+        <!--Blog post start-->
+        <h2><b>Datová analýza dojezdové vzdálenosti&nbsp;do Prahy</b></h2>
+        <br>
+        <img src="resources/img/dima-dallacqua-mf8hKbEw7So-unsplash.jpg" width="100%">
+        <br>
+        <br>
+        <p>S&nbsp;manželkou nějakou dobu uvažujeme o&nbsp;pořízení parcely pro eventuální stavbu rodinného domu. Bohužel naše diskuze se stále stáčejí k&nbsp;tomu, abychom byli dostatečně blízkou k&nbsp;Praze, ale byli dostatečně daleko od těch
+          nejdražších parcel v&nbsp;širokém okolí.</p>
+        <p>Místo dohad jsem zapojil datovou analýzu a&nbsp;spočítal dojezdové vzdálenosti ze všech obcí Středočeského kraje v&nbsp;jeden časový okamžik. Cílem se mi stalo centrum Prahy. Respektive budova Hlavního nádraží.</p>
+
+        <h5><b>Výpočet&nbsp;v Pythonu</h5></b>
+        <p>Pro výpočet jsem použil jednoduchý skriptík v&nbsp;Pythonu. Příkládám ho ve&nbsp;formě GISTu. Komentář k&nbsp;samotným výpočtům najdete přímo v&nbsp;Jupyter souboru.</p>
+        <script src="https://gist.github.com/pavelpetrcz/7e2ccc3d00c3ce7bd8e273bcff96c17e.js"></script>
+        <h5><b>Úpravy&nbsp;v Excelu</h5></b>
+        <p>Někdy pro rychlost místo programování použiju klasický kancelářský program - zde tabulkový procesor. Je to na každém a&nbsp;na&nbsp;zvážení co vám půjde rychleji. Já jsem v&nbsp;procesoru rozdělil výsledky do&nbsp;sloupců, vhodně
+          pospojoval adresy, odstranil
+          přebytečné znaky a&nbsp;spojil do&nbsp;správného řetězce souřadnice GPS.</p>
+
+        <p>Poslední fází byla vizualizace dat. Pro to jsem použil Google Data Studio, kde se zdrojem stala online tabulka v&nbsp;Google Drive a&nbsp;pěkným nástrojem se nastavil vizuál. Paradoxně u&nbsp;této klikací záležitosti jsem se vlastně
+          zapotil úplně nejvíce.&#128541;</p>
+        <h5><b>Report Google Data Studio</h5></b>
+        <p>Reporty si můžete prohlédnout a&nbsp;použít pro své účely zde: <a href="https://datastudio.google.com/reporting/5bc08c4b-bafe-4e11-b2f4-874b384cc0f9/page/IH8uB" target="_blank">Google Data Studio report</a>.</p>
+
+        <h5><b>Zdroje</h5></b>
+        <p>Pro výpočty jsem použil standardně dostupné knihovny ekosystému Python a&nbsp;samotný výpočet provedl pomocí Jupyter Lab.</p>
+        <p>Další zdroje nebo vstupy:</p>
+        <ul>
+          <li>Google Direction API - <a href="https://developers.google.com/maps/documentation/directions/get-directions" target="_blank">https://developers.google.com/maps/documentation/directions/get-directions</a></li>
+          <li>ČSÚ - Území, sídelní struktura - <a href="https://www.czso.cz/csu/xs/uzemi-sidelni-struktura-xs" target="_blank">https://www.czso.cz/csu/xs/uzemi-sidelni-struktura-xs</a></li>
+          <li>EpochConverter - <a href="https://www.epochconverter.com/" target="_blank">https://www.epochconverter.com/</a></li>
+        </ul>
+
+        <!--Blog post end-->
+      </div>
+    </div>
+  </div>
+  <div class="col-2"></div>
+  </div>
+  </div>
+
+  <!--START - bottom pane-->
+  <div class="container">
+    <div class="row mb-3">
+      <div class="col-2"></div>
+      <div class="col-8 text-center my-3"></div>
+      <div class="col-2"></div>
+    </div>
+  </div>
+  <!--END - bottom pane-->
+
+</body>
+</html>
