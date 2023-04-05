@@ -15,6 +15,10 @@ def home(request):
     # TODO: refactor to objects in django templates https://docs.djangoproject.com/en/4.1/ref/templates/language/
 
 
+def contact(request):
+    return render(request, 'web/contact.html')
+
+
 def blog(request):
     if request.method == 'GET':
         all_posts = client.posts.all()

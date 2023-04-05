@@ -3,63 +3,64 @@
 <html lang="cs">
 
 <head>
-  <!-- jquery-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <!-- responzivnost mobiln ho webu-->
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!-- jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-  <!-- m j vlastn  CSS styl-->
-  <link rel="stylesheet" href="../resources/css/styles.css" type="text/css">
+    <!-- responzivnost mobiln ho webu-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
 
-  <!--p id n  Bootstrapu-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <!-- Ikonky -->
+    <link rel="stylesheet" href="resources/css/ionicons.css" type="text/css">
 
-  <!-- Google Fonts-->
-  <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+    <!--p id n  Bootstrapu-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+          integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+            integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+            crossorigin="anonymous"></script>
 
-  <!-- Ikonky -->
-  <link rel="stylesheet" href="../resources/css/ionicons.css" type="text/css">
-  <meta charset="UTF-8">
-  <title>Pavel Petr | IT analytik | Praha</title>
+    <meta charset="UTF-8">
+    <title>Pavel Petr | IT analytik | Praha</title>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-    <a class="navbar-brand" href="index.html">Pavel Petr</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#toggle" aria-controls="toggle" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <a class="navbar-brand" href="{% url 'home' %}">Pavel Petr</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#toggle" aria-controls="toggle"
+            aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="toggle">
-      <div class="navbar-nav">
-        <a class="nav-item nav-link" href="projects.html">Projekty</a>
-        <a class="nav-item nav-link" href="aboutme.html">Bio</a>
-        <a class="nav-item nav-link" href="contact.html">Kontakt</a>
-        <a class="nav-item nav-link" href="blog.html">Blog</a>
-      </div>
+        <div class="navbar-nav">
+            <a class="nav-item nav-link" href="{% url 'contact' %}">Kontakt</a>
+            <a class="nav-item nav-link" href="{% url 'blog' %}">Blog</a>
+        </div>
     </div>
-  </nav>
+</nav>
 
-
-  <!--START - odkazy SM-->
-  <div class="container">
-    <div class="row mb-2">
-      <div class="col-2"></div>
-      <div class="col-8 text-center my-3">
-        <br>
-        <p class="telo">Kontaktujte mě e-mailem</p>
-        <p><b>ppetr<span>   </span><span> </span>[zavináč]<span> </span>ppetr.cz</b></p>
-        <p class="telo">nebo mi zavolejte</p>
-        <p><b>2E3C0A10</b> <sup><a href="https://www.rapidtables.com/convert/number/hex-to-decimal.html" target="_blank">hex</a></sup></p>
-        <p class="telo">Taktéž mi můžete napsat na Githubu, Twitteru nebo LinkedIn.</p>
-        <a href="https://www.linkedin.com/in/pavelpetr/" target="_blank"><i class="icon ion-social-linkedin p-2 ikonka"></i></a>
-        <a href="http://www.github.com/pavelpetrcz" target="_blank"><i class="icon ion-social-github p-2 ikonka"></i></a>
-        <a href="http://www.twitter.com/pavelpetrcz" target="_blank"><i class="icon ion-social-twitter p-2 ikonka"></i></a>
-      </div>
-      <div class="col-2"></div>
+<!--START - odkazy SM-->
+<div class="container">
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-12">
+            <br>
+            <p class="telo">Kontaktujte mě e-mailem</p>
+            <p><b>ppetr<span>   </span><span> </span>[zavináč]<span> </span>ppetr.cz</b></p>
+            <p class="telo">nebo mi zavolejte</p>
+            <p><b>2E3C0A10</b> <sup><a href="https://www.rapidtables.com/convert/number/hex-to-decimal.html"
+                                       target="_blank">hex</a></sup></p>
+            <p class="telo">Taktéž mi můžete napsat na Githubu, Twitteru nebo LinkedIn.</p>
+            <a href="https://www.linkedin.com/in/pavelpetr/" target="_blank"><i
+                    class="icon ion-social-linkedin p-2 ikonka"></i></a>
+            <a href="http://www.github.com/pavelpetrcz" target="_blank"><i
+                    class="icon ion-social-github p-2 ikonka"></i></a>
+            <a href="http://www.twitter.com/pavelpetrcz" target="_blank"><i
+                    class="icon ion-social-twitter p-2 ikonka"></i></a>
+        </div>
+        <div class="col"></div>
     </div>
-  </div>
-  <!--KONEC - odkazy SM-->
+</div>
+<!--KONEC - odkazy SM-->
 
 </body>
 
