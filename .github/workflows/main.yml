@@ -1,2 +1,68 @@
-- name: Build and push Docker images
-  uses: docker/build-push-action@v4.0.0
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Codespaces
+Marketplace
+Explore
+ 
+@pavelpetrcz 
+pavelpetrcz
+/
+saunaCbOccupancy
+Public
+Cannot fork because you own this repository and are not a member of any organizations.
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+Settings
+saunaCbOccupancy/.github/workflows/docker-image.yml
+
+pavelpetrcz lower case fix - workflow.yml
+Latest commit 0b8d278 on Dec 6, 2021
+ History
+ 1 contributor
+36 lines (28 sloc)  839 Bytes
+ 
+
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+        - name: Check Out Repo
+          uses: actions/checkout@v2
+        - name: Login to Docker Hub
+          uses: docker/login-action@v1
+          with:
+            username: ${{ secrets.DOCKER_USER }}
+            password: ${{ secrets.DOCKER_HUB_TOKEN }}
+
+        - name: Set up Docker Buildx
+          id: buildx
+          uses: docker/setup-buildx-action@v1
+
+        - name: Build and push
+          id: docker_build
+          uses: docker/build-push-action@v2
+          with:
+            context: ./
+            file: ./Dockerfile
+            push: true
+            tags: ${{ secrets.DOCKER_USER }}/ppetr:latest
+
+        - name: Image digest
+          run: echo ${{ steps.docker_build.outputs.digest }}
