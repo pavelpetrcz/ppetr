@@ -1,36 +1,4 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Codespaces
-Marketplace
-Explore
- 
-@pavelpetrcz 
-pavelpetrcz
-/
-saunaCbOccupancy
-Public
-Cannot fork because you own this repository and are not a member of any organizations.
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-Settings
-saunaCbOccupancy/.github/workflows/docker-image.yml
-
-pavelpetrcz lower case fix - workflow.yml
-Latest commit 0b8d278 on Dec 6, 2021
- History
- 1 contributor
-36 lines (28 sloc)  839 Bytes
- 
-
-name: Docker Image CI
+name: Ppetr Docker Image CI
 
 on:
   push:
