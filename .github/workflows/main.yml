@@ -1,4 +1,2 @@
-on:
-  pull_request:
-    branches:
-    - main
+- name: Build and push Docker images
+  uses: docker/build-push-action@v4.0.0
