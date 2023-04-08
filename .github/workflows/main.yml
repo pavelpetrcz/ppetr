@@ -1,4 +1,4 @@
-name: Ppetr Docker Image CI
+name: ppetr web ci
 
 on:
   push:
