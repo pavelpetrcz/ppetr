@@ -2,7 +2,7 @@ name: ppetr web ci
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
 
 jobs:
   build:
