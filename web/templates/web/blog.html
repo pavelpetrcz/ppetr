@@ -7,34 +7,27 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- responzivnost mobilniho webu-->
     <meta name="viewport" content="width=device-width,initial-scale=1">
-
-    <!-- muj vlastni CSS styl-->
-    <link rel="stylesheet" href="resources/css/styles.css" type="text/css">
-
-    <!-- Bootstrapu-->
+    <!-- Bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
           integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
             integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
             crossorigin="anonymous"></script>
-
-    <!-- Ikonky -->
-    <link rel="stylesheet" href="resources/css/ionicons.css" type="text/css">
-
     <meta charset="UTF-8">
     <title>Pavel Petr | IT analytik | Praha</title>
 </head>
 
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-    <a class="navbar-brand" href="{% url 'home' %}">Pavel Petr</a>
+    <a class="navbar-brand" href="{% url 'home' %}">c[_]</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#toggle" aria-controls="toggle"
             aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="toggle">
         <div class="navbar-nav">
-            <a class="nav-item nav-link" href="{% url 'contact' %}">Kontakt</a>
+            <a class="nav-item nav-link" href="{% url 'home' %}">Home</a>
+            <a class="nav-item nav-link" href="https://www.linkedin.com/in/pavelpetr/" target="_blank">Profil</a>
             <a class="nav-item nav-link" href="{% url 'blog' %}">Blog</a>
         </div>
     </div>
@@ -42,44 +35,29 @@
 
 <div class="container">
     <div class="row">
-
-    <div class="col"></div>
-    <!-- main col -->
-    <div class="col-12">
-        <br>
-        <h4>Blog</h4><br>
-        <div class="card-columns">
-            {% for post in posts_list %}
+        <!--left col-->
+        <div class="col"></div>
+        <!-- main col -->
+        <div class="col-12">
+            <br>
+            <h4>Blog</h4><br>
+            <div class="card-columns">
+                {% for post in posts_list %}
                 <div class="card">
                     <img src="{{ post.image_url }}" class="card-img-top" alt="">
                     <div class="card-body">
-                        <h5 class="card-title nadpisKarty">{{ post.title }}</h5>
+                        <h5 class="card-title nadpisKarty">{{ post.title|safe }}</h5>
                         <p class="card-text"><small class="text-muted">{{ post.publishedAt }}</small></p>
-                        <p class="card-text">{{ post.summary }}</p>
-                        <a href="{% url 'blogpost' slug=post.slug %}" class="btn btn-outline-primary">Číst</a>
+                        <p class="card-text">{{ post.summary|safe }}</p>
+                        <a href="{% url 'blogpost' post_id=post.post_id %}" class="btn btn-outline-primary">Číst</a>
                     </div>
                 </div>
-            {% endfor %}
+                {% endfor %}
+            </div>
         </div>
-    </div>
-    <div class="col"></div>
+        <!--right col-->
+        <div class="col"></div>
     </div>
 </div>
-
-
-
-<!--START - odkazy SM-->
-<div class="container">
-    <div class="row mb-3">
-        <div class="col-2"></div>
-        <div class="col-8 text-center my-3">
-
-        </div>
-        <div class="col-2"></div>
-    </div>
-</div>
-<!--KONEC - odkazy SM-->
-
 </body>
-
 </html>

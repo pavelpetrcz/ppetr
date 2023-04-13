@@ -71,11 +71,7 @@ html *
   font-size: 10px;
 }
 
-.card-columns {
-  @include media-breakpoint-only(lg) {
-    column-count: 3;
-  }
-  @include media-breakpoint-only(xl) {
-    column-count: 3;
-  }
+.ion-icon {
+    font-size: 1647px;
+    color: crimson;
 }
