@@ -5,7 +5,8 @@ bearer_jwt = os.getenv('B_JWT')
 headers = {"Authorization": bearer_jwt}
 base_url = 'https://192-168-88-141.nomakcz.direct.quickconnect.to/wordpress'
 
-#TODO: error handling
+
+# TODO: error handling
 def get_all_post():
     """
     Get all posts
