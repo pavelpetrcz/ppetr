@@ -6,5 +6,5 @@ RUN pip install -r requirements.txt
 COPY . code
 WORKDIR /copy
 EXPOSE 8000
-ENTRYPOINT ["python", "ppetr/manage.py"]
+ENTRYPOINT ["python", "code/manage.py"]
 CMD ["runserver", "0.0.0.0:8000"]
