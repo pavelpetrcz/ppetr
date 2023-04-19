@@ -1,4 +1,4 @@
-name: ppetr web ci
+name: ppetr web - nas
 
 on:
   push:
