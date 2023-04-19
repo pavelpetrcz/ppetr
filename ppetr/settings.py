@@ -24,7 +24,7 @@ SECRET_KEY = os.environ['DJANGO_SECRET']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["ppetr.cz", "0.0.0.0:8000"]
+ALLOWED_HOSTS = ["ppetr.cz", "0.0.0.0:8000", "localhost"]
 
 # Application definition
 
