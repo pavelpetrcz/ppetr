@@ -16,6 +16,7 @@ def home(request):
 
 
 def blog(request):
+    sys.stderr.write('views.blog started to process')
     if request.method == 'GET':
         list_of_blogposts = []
 
