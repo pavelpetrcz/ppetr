@@ -1,5 +1,6 @@
 import json
 import sys
+import traceback
 
 from datetime import datetime
 from django.core.exceptions import ObjectDoesNotExist
@@ -16,7 +17,7 @@ def home(request):
 
 
 def blog(request):
-    sys.stderr.write('views.blog started to process')
+    sys.stderr.write('views.blog started to process\n')
     if request.method == 'GET':
         list_of_blogposts = []
 
@@ -33,6 +34,9 @@ def blog(request):
             msg = 'Requst timed out.'
             sys.stderr.write(msg)
             raise TimeoutError(msg)
+        except Exception:
+            msg = 'Exception'
+            sys.stderr.write(msg + str(traceback.extract_stack()))
 
         # iterate all posts
         try:
