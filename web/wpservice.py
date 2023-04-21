@@ -3,7 +3,7 @@ import requests as re
 
 bearer_jwt = os.getenv('B_JWT')
 headers = {"Authorization": bearer_jwt}
-base_url = 'https://192-168-88-141.nomakcz.direct.quickconnect.to/wordpress'
+base_url = os.getenv('BASE_URL')
 
 
 # TODO: error handling
