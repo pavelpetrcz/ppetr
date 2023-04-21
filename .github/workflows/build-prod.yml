@@ -1,4 +1,4 @@
-name: ppetr web - nas
+name: ppetr web - prod
 
 on:
   push:
