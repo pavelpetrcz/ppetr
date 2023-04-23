@@ -1,6 +1,8 @@
 import json
-from datetime import datetime
+import sys
+import traceback
 
+from datetime import datetime
 from django.core.exceptions import ObjectDoesNotExist
 from django.http import Http404
 from django.shortcuts import render
@@ -15,6 +17,7 @@ def home(request):
 
 
 def blog(request):
+    sys.stderr.write('views.blog started to process\n')
     if request.method == 'GET':
         list_of_blogposts = []
 
@@ -22,10 +25,20 @@ def blog(request):
         try:
             response = wp.get_all_post()
             all_posts = json.loads(response.text)
+            sys.stderr.write('path /blog - all done' + all_posts)
         except Http404:
-            raise Http404("Unable to load blogposts.")
+            msg = 'Unable to load blogposts.'
+            sys.stderr.write(msg)
+            raise Http404(msg)
         except TimeoutError:
-            raise TimeoutError("Requst timed out.")
+            msg = 'Requst timed out.'
+            sys.stderr.write(msg)
+            raise TimeoutError(msg)
+        except Exception:
+            msg = 'Exception'
+            sys.stderr.write(msg + str(traceback.extract_stack()))
+
+        # iterate all posts
         try:
             for post in all_posts:
                 img = post["featured_media"]
@@ -46,6 +59,7 @@ def blog(request):
                 }
                 list_of_blogposts.append(b)
         except TypeError or ValueError or RuntimeError or KeyError:
+            sys.stderr.write('Iteration through posts failed.')
             raise Exception('Unexpected error. Try again later.')
         # TODO: logging or errors https://sentry.io/welcome/
 
