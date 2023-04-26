@@ -2,12 +2,11 @@ import json
 import sys
 import traceback
 
-from datetime import datetime
 from django.core.exceptions import ObjectDoesNotExist
 from django.http import Http404
 from django.shortcuts import render
 
-from ppetr import settings
+from web import utils as u
 from web import wpservice as wp
 
 
@@ -40,23 +39,23 @@ def blog(request):
 
         # iterate all posts
         try:
+            # get all images
+            m = wp.get_all_images()
+            media = json.loads(m.text)
+
             for post in all_posts:
                 img = post["featured_media"]
-
-                if img == 0:
-                    i = settings.DEFAULT_BLOGPOST_IMG
-                else:
-                    image_url = json.loads(wp.get_img_url(str(img)).text)
-                    i = image_url["guid"]["rendered"]
 
                 b = {
                     "body": post["content"]["rendered"],
                     "title": post["title"]["rendered"],
                     "summary": post["excerpt"]["rendered"],
-                    "image_url": i,
+                    "image_url": u.get_image_url(media,img),
                     "post_id": post["id"],
-                    "publishedAt": convert_dt_to_str(post["date"])
+                    "publishedAt": u.convert_dt_to_str(post["date"])
                 }
+
+                # add post to list for response
                 list_of_blogposts.append(b)
         except TypeError or ValueError or RuntimeError or KeyError:
             sys.stderr.write('Iteration through posts failed.')
@@ -86,11 +85,3 @@ def blogpost(request, post_id):
         raise Http404('Incorrect HTTP method.')
 
 
-def convert_dt_to_str(dt):
-    """
-    Convert date time format
-    :param dt: string %Y-%m-%dT%H:%M:%S.%f%Z
-    :return: string %d.%m.%Y
-    """
-    d = datetime.strptime(dt, '%Y-%m-%dT%H:%M:%S')
-    return datetime.strftime(d, '%d.%m.%Y')
