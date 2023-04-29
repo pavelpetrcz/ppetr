@@ -28,11 +28,21 @@ def get_post(post_id):
     return response
 
 
-def get_img_url(img_id):
+# def get_img_url(img_id):
+#     """
+#     Get URL of the image
+#     @param img_id: id of media asset in string
+#     """
+#     url_to_requst = base_url + "wp-json/wp/v2/media/" + img_id
+#     response = re.get(url_to_requst, headers=headers)
+#     return response
+
+
+def get_all_images():
     """
-    Get URL of the image
-    @param img_id: id of media asset in string
+    Get all media assets in one call
+    @return: all media assets
     """
-    url_to_requst = base_url + "/index.php/wp-json/wp/v2/media/" + img_id
-    response = re.get(url_to_requst, headers=headers)
+    url_to_request = base_url + "/wp-json/wp/v2/media"
+    response = re.get(url_to_request, headers=headers)
     return response
