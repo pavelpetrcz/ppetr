@@ -23,7 +23,6 @@ SECRET_KEY = os.getenv('DJANGO_SECRET')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG_MODE')
-# TODO: pro větev nas dát True, pro prod tepreve false
 
 ALLOWED_HOSTS = ["ppetr.cz", "0.0.0.0:8000", "localhost", "127.0.0.1"]
 
@@ -115,4 +114,4 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Default image for blog
-DEFAULT_BLOGPOST_IMG = 'https://192-168-88-141.nomakcz.direct.quickconnect.to/wordpress/wp-content/uploads/2023/04/nick-fewings-XMyWlJAoLh4-unsplash.jpg'
+DEFAULT_BLOGPOST_IMG = os.getenv('DEFAULT_BLOGPOST_IMG')
