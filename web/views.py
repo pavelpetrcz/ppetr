@@ -83,5 +83,3 @@ def blogpost(request, post_id):
         return render(request, 'web/blogpost.html', context)
     else:
         raise Http404('Incorrect HTTP method.')
-
-
