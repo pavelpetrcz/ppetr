@@ -7,4 +7,5 @@ COPY . code
 WORKDIR /code
 EXPOSE 8000
 ENTRYPOINT ["python", "manage.py"]
+CMD ["python manage.py migrate"]
 CMD ["runserver", "0.0.0.0:8000"]
