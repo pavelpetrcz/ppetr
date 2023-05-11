@@ -82,7 +82,3 @@ def blogpost(request, post_id):
         return render(request, 'web/blogpost.html', context)
     else:
         raise Http404('Incorrect HTTP method.')
-
-
-def trigger_error(request):
-    division_by_zero = 1 / 0
