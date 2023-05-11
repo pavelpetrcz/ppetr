@@ -60,7 +60,6 @@ def blog(request):
         except TypeError or ValueError or RuntimeError or KeyError:
             sys.stderr.write('Iteration through posts failed.')
             raise Exception('Unexpected error. Try again later.')
-        # TODO: logging or errors https://sentry.io/welcome/
 
         context = {'posts_list': list_of_blogposts}
         return render(request, 'web/blog.html', context)
@@ -83,3 +82,7 @@ def blogpost(request, post_id):
         return render(request, 'web/blogpost.html', context)
     else:
         raise Http404('Incorrect HTTP method.')
+
+
+def trigger_error(request):
+    division_by_zero = 1 / 0
