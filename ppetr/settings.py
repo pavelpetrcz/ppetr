@@ -118,8 +118,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Default image for blog
 DEFAULT_BLOGPOST_IMG = os.getenv('DEFAULT_BLOGPOST_IMG')
 
-
-
 sentry_sdk.init(
     dsn="https://871c7616f34a46fd89effab5ac1ca5ba@o4505164715720704.ingest.sentry.io/4505164745474048",
     integrations=[
