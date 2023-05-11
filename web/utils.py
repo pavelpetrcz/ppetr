@@ -1,4 +1,5 @@
 from datetime import datetime
+from ppetr import settings
 
 
 def get_image_url(media, img):
@@ -9,13 +10,12 @@ def get_image_url(media, img):
     @return: URL of image
     """
     for item in media:
-        try:
-            if item["id"] == img:
-                return item["guid"]["rendered"]
-            else:
-                continue
-        finally:
-            from ppetr import settings
+        if item["id"] == img:
+            url = item["guid"]["rendered"]
+            return url
+        elif item["id"] != img:
+            continue
+        else:
             return settings.DEFAULT_BLOGPOST_IMG
 
 

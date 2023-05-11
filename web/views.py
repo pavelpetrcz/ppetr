@@ -5,9 +5,25 @@ import traceback
 from django.core.exceptions import ObjectDoesNotExist
 from django.http import Http404
 from django.shortcuts import render
-
 from web import utils as u
 from web import wpservice as wp
+
+
+def blogpost(request, post_id):
+    if request.method == 'GET':
+        try:
+            post = wp.get_post(post_id)
+            j_post = json.loads(post.text)
+            post = {
+                "title": j_post["title"]["rendered"],
+                "body": j_post["content"]["rendered"]
+            }
+            context = {'blogpost': post}
+        except NameError or ObjectDoesNotExist:
+            raise Http404('Blogpost does not exists.')
+        return render(request, 'web/blogpost.html', context)
+    else:
+        raise Http404('Incorrect HTTP method.')
 
 
 def home(request):
@@ -45,12 +61,13 @@ def blog(request):
 
             for post in all_posts:
                 img = post["featured_media"]
+                url = u.get_image_url(media, img)
 
                 b = {
                     "body": post["content"]["rendered"],
                     "title": post["title"]["rendered"],
                     "summary": post["excerpt"]["rendered"],
-                    "image_url": u.get_image_url(media,img),
+                    "image_url": str(url),
                     "post_id": post["id"],
                     "publishedAt": u.convert_dt_to_str(post["date"])
                 }
@@ -65,20 +82,3 @@ def blog(request):
         return render(request, 'web/blog.html', context)
     else:
         raise Http404("Incorrect HTTP method.")
-
-
-def blogpost(request, post_id):
-    if request.method == 'GET':
-        try:
-            post = wp.get_post(post_id)
-            j_post = json.loads(post.text)
-            post = {
-                "title": j_post["title"]["rendered"],
-                "body": j_post["content"]["rendered"]
-            }
-            context = {'blogpost': post}
-        except NameError or ObjectDoesNotExist:
-            raise Http404('Blogpost does not exists.')
-        return render(request, 'web/blogpost.html', context)
-    else:
-        raise Http404('Incorrect HTTP method.')
