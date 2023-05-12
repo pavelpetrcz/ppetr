@@ -60,15 +60,15 @@ def blog(request):
             media = json.loads(m.text)
 
             for post in all_posts:
-                img = post["featured_media"]
+                img = all_posts["featured_media"]
                 url = u.get_image_url(media, img)
 
                 b = {
-                    "body": post["content"]["rendered"],
-                    "title": post["title"]["rendered"],
-                    "summary": post["excerpt"]["rendered"],
+                    "body": all_posts["content"]["rendered"],
+                    "title": all_posts["title"]["rendered"],
+                    "summary": all_posts["excerpt"]["rendered"],
                     "image_url": str(url),
-                    "post_id": post["id"],
+                    "post_id": all_posts["id"],
                     "publishedAt": u.convert_dt_to_str(post["date"])
                 }
 
