@@ -24,7 +24,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('DJANGO_SECRET')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv('DEBUG_MODE')
+DEBUG = True
+# os.getenv('DEBUG_MODE')
 
 ALLOWED_HOSTS = ["0.0.0.0:8000", "localhost", "127.0.0.1", "185.52.1.236", "www.ppetr.cz"]
 
@@ -118,6 +119,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Default image for blog
 DEFAULT_BLOGPOST_IMG = os.getenv('DEFAULT_BLOGPOST_IMG')
 
+# TODO: https://stackoverflow.com/questions/76072840/how-to-add-custome-tag-in-sentry-appender
 sentry_sdk.init(
     dsn="https://871c7616f34a46fd89effab5ac1ca5ba@o4505164715720704.ingest.sentry.io/4505164745474048",
     integrations=[
