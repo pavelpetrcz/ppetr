@@ -28,9 +28,9 @@ jobs:
           env:
             B_JWT: ${{ secrets.B_JWT }}
             DJANGO_SECRET: ${{ secrets.DJANGO_SECRET }}
-            BASE_URL: ${{ env.BASE_URL }}
-            DEBUG_MODE: ${{ env.DEBUG_MODE }}
-            DEFAULT_BLOGPOST_IMG: ${{ env.DEFAULT_BLOGPOST_IMG }}
+            BASE_URL: ${{ vars.BASE_URL }}
+            DEBUG_MODE: ${{ vars.DEBUG_MODE }}
+            DEFAULT_BLOGPOST_IMG: ${{ vars.DEFAULT_BLOGPOST_IMG }}
           with:
             context: ./
             file: ./Dockerfile

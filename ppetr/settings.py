@@ -24,8 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('DJANGO_SECRET')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-# os.getenv('DEBUG_MODE')
+DEBUG = os.getenv('DEBUG_MODE')
 
 ALLOWED_HOSTS = ["0.0.0.0:8000", "localhost", "127.0.0.1", "185.52.1.236", "www.ppetr.cz"]
 
