@@ -25,11 +25,18 @@ jobs:
         - name: Build and push
           id: docker_build
           uses: docker/build-push-action@v2
+          env:
+            B_JWT: ${{ secrets.B_JWT }}
+            DJANGO_SECRET: ${{ secrets.DJANGO_SECRET }}
+            BASE_URL: ${{ env.BASE_URL }}
+            DEBUG_MODE: ${{ env.DEBUG_MODE }}
+            DEFAULT_BLOGPOST_IMG: ${{ env.DEFAULT_BLOGPOST_IMG }}
           with:
             context: ./
             file: ./Dockerfile
             push: true
             tags: ${{ secrets.DOCKER_HUB_USERNAME }}/ppetr:prod
-
         - name: Image digest
           run: echo ${{ steps.docker_build.outputs.digest }}
+        - name: BASE_URL
+          run: echo ${{ steps.docker_build.env.BASE_URL }}
