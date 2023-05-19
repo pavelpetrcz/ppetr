@@ -40,7 +40,7 @@ def blog(request):
         try:
             response = wp.get_all_post()
             all_posts = json.loads(response.text)
-            sys.stderr.write('path /blog - all done' + all_posts)
+            sys.stderr.write('path /blog - all done\n')
         except Http404:
             msg = 'Unable to load blogposts.'
             sys.stderr.write(msg)
@@ -51,7 +51,8 @@ def blog(request):
             raise TimeoutError(msg)
         except Exception:
             msg = 'Exception'
-            sys.stderr.write(msg + str(traceback.extract_stack()))
+            sys.stderr.write(msg)
+            raise Exception(msg)
 
         # iterate all posts
         try:
