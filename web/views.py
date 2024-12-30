@@ -13,12 +13,15 @@ def blogpost(request, post_id):
     if request.method == 'GET':
         try:
             post = wp.get_post(post_id)
-            j_post = json.loads(post.text)
-            post = {
-                "title": j_post["title"]["rendered"],
-                "body": j_post["content"]["rendered"]
-            }
-            context = {'blogpost': post}
+            if post.status_code==200:
+                j_post = json.loads(post.text)
+                post = {
+                    "title": j_post["title"]["rendered"],
+                    "body": j_post["content"]["rendered"]
+                }
+                context = {'blogpost': post}
+            else:
+                raise Http404('Blogpost does not exists.')
         except NameError or ObjectDoesNotExist:
             raise Http404('Blogpost does not exists.')
         return render(request, 'web/blogpost.html', context)

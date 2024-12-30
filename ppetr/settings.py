@@ -25,7 +25,7 @@ SECRET_KEY = os.getenv('DJANGO_SECRET')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG_MODE')
-
+# TODO - security na webu Djanga
 ALLOWED_HOSTS = ["0.0.0.0:8000", "localhost", "127.0.0.1", "185.52.1.236", "www.ppetr.cz"]
 
 # Application definition
